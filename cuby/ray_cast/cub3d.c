@@ -71,19 +71,21 @@ void collect(t_garbage **garb, char **str)
     }
     ft_lst_add_back(garb, ft_lst_new(str));
 }
-int helper(unsigned int *arr, char *str, t_garbage **garb)
+int helper(long long *arr, char *str, t_garbage **garb)
 {
     char **spl;
     int i;
 
     i = 0;
+    printf("%s\n", str);
     spl = ft_split(str, ',');
     collect(garb, spl);
     while(spl[i])
     {
         arr[i] = ft_atoi(spl[i]);
-        if(arr[i] > 255 || arr[i] < 0)
+        if(arr[i] > 255 || arr[i] < 0 || arr[i] == INT_MAX || arr[i] == INT_MIN)
         {
+            printf("ERROR\n");
             return (-1);
         }
         i++;

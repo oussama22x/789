@@ -43,8 +43,8 @@ void init_befor_init_hh(t_textr **txtr)
     (*txtr)->NO = NULL;
     (*txtr)->SO = NULL;
     (*txtr)->WE = NULL;
-    (*txtr)->C = calloc(sizeof(int) , 3);
-    (*txtr)->F = calloc(sizeof(int) , 3);
+    (*txtr)->C = calloc(sizeof(long long) , 3);
+    (*txtr)->F = calloc(sizeof(long long) , 3);
     ft_lst_add_back(&(*txtr)->garb, ft_lst_new((*txtr)->C));
     ft_lst_add_back(&(*txtr)->garb, ft_lst_new((*txtr)->F));
 }

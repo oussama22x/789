@@ -22,10 +22,10 @@ typedef struct s_textr
     char **S;
     char **color_f;
     char **color_c;
-    unsigned int *F;
-    unsigned int *C;
-    unsigned int C_CLOR;
-    unsigned int F_CLOR;
+    long long *F;
+    long long *C;
+    long long C_CLOR;
+    long long F_CLOR;
     t_garbage *garb;
 } t_textr;
 
@@ -63,7 +63,7 @@ int check_extionts(char *argv);
 int count_pinter(char **ptr);
 int count(char **str);
 int check_final(t_textr *txtr);
-int helper(unsigned int *arr, char *str, t_garbage **garb);
+int helper(long long *arr, char *str, t_garbage **garb);
 int ft_atoi_num(t_textr *txt);
 unsigned int RGBtoUint8(int R, int G, int B);
 void get_colers(t_textr *txtr);

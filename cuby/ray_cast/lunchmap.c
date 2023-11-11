@@ -181,9 +181,9 @@ int move_player_left_right(int x,int y ,t_data *data)
 		return (0);
     if (x >= mousse_position)
     {
-        data->direction += (0.009) *fabs((double)x - mousse_position) ;
+        data->direction += (0.010) *fabs((double)x - mousse_position) ;
     } else{
-        data->direction -= (0.009)  *fabs((double)x - mousse_position) ;
+        data->direction -= (0.010)  *fabs((double)x - mousse_position) ;
     }
     mousse_position = x;
     return(1);
